@@ -1,6 +1,6 @@
 # Rust Temperature Converter
 
-A simple temperature converter library written in Rust. Converts between Celsius and Fahrenheit. This project was created as a learning exercise to explore the fundamentals of Rust.
+A simple temperature converter CLI program written in Rust. Converts between Celsius and Fahrenheit. This project was created as a learning exercise to explore the fundamentals of Rust.
 
 ## Features
 
@@ -29,31 +29,7 @@ A simple temperature converter library written in Rust. Converts between Celsius
     cargo build
     ```
 
-3.  **Run the project (example):**
-
-    You can either use the library in your own Rust project or create a simple command-line interface (CLI) to use it directly.  Here's a basic example of how you might use the library in a `src/main.rs` file:
-
-    ```rust
-    use rust_temperature_converter::{celsius_to_fahrenheit, fahrenheit_to_celsius};
-
-    fn main() {
-        let celsius = 25.0;
-        let fahrenheit = celsius_to_fahrenheit(celsius);
-        println!("{}°C is {}°F", celsius, fahrenheit);
-
-        let fahrenheit = 77.0;
-        let celsius = fahrenheit_to_celsius(fahrenheit);
-        println!("{}°F is {}°C", fahrenheit, celsius);
-    }
-    ```
-
-    Add the following to your `Cargo.toml` file under `[dependencies]`:
-
-    ```toml
-    rust-temperature-converter = { path = "./" } # Assuming your library is in the same directory
-    ```
-
-    Then run:
+3.  **Run the project:**
 
     ```bash
     cargo run
@@ -66,13 +42,14 @@ The library provides the following functions:
 *   `celsius_to_fahrenheit(celsius: f64) -> f64`: Converts a Celsius temperature (as a `f64`) to Fahrenheit (as a `f64`).
 *   `fahrenheit_to_celsius(fahrenheit: f64) -> f64`: Converts a Fahrenheit temperature (as a `f64`) to Celsius (as a `f64`).
 
-## Examples
+## Examples output from CLI
 
-```rust
-use rust_temperature_converter::{celsius_to_fahrenheit, fahrenheit_to_celsius};
+```bash
+--- Welcome to the rusty Temperature Converter program! --- 
 
-let celsius = 0.0;
-let fahrenheit = celsius_to_fahrenheit(celsius); // fahrenheit will be 32.0
-
-let fahrenheit = 212.0;
-let celsius = fahrenheit_to_celsius(fahrenheit); // celsius will be 100.0
+Would you like to convert from Fahrenheit (F) or from Celsius(C)?
+F
+please enter a temperature to be converted (expected format: 00.0)
+68
+You choosed to convert 68°F  from Celsius.
+result of the conversion: 20°C
